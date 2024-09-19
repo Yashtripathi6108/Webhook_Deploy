@@ -3,7 +3,7 @@ from flask_cors import CORS
 
 app = create_app()
 
-CORS(app, origins=["https://66ebabad2ffe93169d4aa107--fastidious-platypus-481cda.netlify.app"])
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/')
 def greetings() -> str:
