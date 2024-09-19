@@ -5,9 +5,6 @@ app = create_app()
 
 CORS(app)
 
-@app.route('/')
-def greetings() -> str:
-    return 'Welcome to the webhook'
 
 
 
