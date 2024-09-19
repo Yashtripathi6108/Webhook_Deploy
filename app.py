@@ -3,12 +3,14 @@ from flask_cors import CORS
 
 app = create_app()
 
-CORS(app, resources={r"/webhook/*": {"origins": "*"}})
+CORS(app)
 
 @app.route('/')
-
 def greetings() -> str:
     return 'Welcome to the webhook'
 
 
+
+if __name__ == '__main__': 
+    app.run(debug=True)
 
