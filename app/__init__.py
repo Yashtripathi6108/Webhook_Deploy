@@ -7,5 +7,11 @@ def create_app():
     
   
     app.register_blueprint(webhook)
+
+
+    @app.route('/')
+    def greetings() -> str:
+        return 'Welcome to the webhook'
+
     
     return app
